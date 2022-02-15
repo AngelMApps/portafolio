@@ -229,14 +229,10 @@ export default {
           });
         });
     })
-    function seeProjects() {
-      console.log(projects);
-    }
     return {
       publicPath: process.env.BASE_URL,
       projects,
       skills,
-      seeProjects,
     }
   }
 };
