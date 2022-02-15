@@ -216,6 +216,9 @@ export default {
       }, {
         'name': 'svelte',
         'icon': require('./assets/portfolio/svelte.png'),
+      },{
+        'name': 'VueJS',
+        'icon': require('./assets/portfolio/vue.png'),
       }, {
         'name': 'vscode',
         'icon': require('./assets/portfolio/vscode.png'),
