@@ -13,7 +13,7 @@
         <h1>
           Hola,
           <br />Soy
-          <b style="color: #fff;">Angel Mora</b>
+          <b style="color: #fff">Angel Mora</b>
         </h1>
         <h2>Desarrollador web</h2>
         <ul class="links-social__contact">
@@ -92,11 +92,7 @@
         <br />y
         que este disponible en diferentes tipos de dispositivos.
       </p>
-      <img
-        class="avatar"
-        src="./assets/portfolio/yo.jpeg"
-        alt="avatar"
-      />
+      <img class="avatar" src="./assets/portfolio/yo.jpeg" alt="avatar" />
     </section>
     <section
       id="mi-skills"
@@ -116,7 +112,7 @@
             :key="index"
           >
             <div class="card-body">
-              <img :src="skill.icon"  :alt="skill.name" />
+              <img :src="skill.icon" :alt="skill.name" />
               <h5 class="card-title">{{ skill.name }}</h5>
             </div>
           </div>
@@ -172,13 +168,13 @@
 </template>
 
 <script>
-import Navbar from './components/Navbar.vue';
+import Navbar from "./components/Navbar.vue";
 import { onMounted, reactive } from "vue";
-import axios from 'axios';
+import axios from "axios";
 export default {
   name: "App",
   components: {
-    Navbar
+    Navbar,
   },
   setup() {
     let projects = reactive([]);
@@ -186,58 +182,70 @@ export default {
       {
         'name': 'css',
         'icon': require('./assets/portfolio/css.png'),
-      }, {
-        'name': 'django',
-        'icon': require('./assets/portfolio/django.png'),
-      }, {
+      },
+      {
+        'name': "fast api",
+        'icon': require('./assets/portfolio/fastapi.png'),
+      },
+      {
         'name': 'firebase',
         'icon': require('./assets/portfolio/firebase.png'),
-      }, {
+      },
+      {
         'name': 'git',
-        'icon':  require('./assets/portfolio/git.png'),
-      }, {
+        'icon': require('./assets/portfolio/git.png'),
+      },
+      {
         'name': 'github',
         'icon': require('./assets/portfolio/github.png'),
-      }, {
+      },
+      {
         'name': 'html',
         'icon': require('./assets/portfolio/html.png'),
-      }, {
+      },
+      {
         'name': 'javascript',
         'icon': require('./assets/portfolio/js.png'),
-      }, {
+      },
+      {
         'name': 'mongodb',
         'icon': require('./assets/portfolio/mongodb.png'),
-      }, {
+      },
+      {
         'name': 'python',
         'icon': require('./assets/portfolio/python.png'),
-      }, {
+      },
+      {
         'name': 'sass',
         'icon': require('./assets/portfolio/sass.png'),
-      }, {
+      },
+      {
         'name': 'svelte',
         'icon': require('./assets/portfolio/svelte.png'),
-      },{
+      },
+      {
         'name': 'VueJS',
         'icon': require('./assets/portfolio/vue.png'),
-      }, {
+      },
+      {
         'name': 'vscode',
         'icon': require('./assets/portfolio/vscode.png'),
       },
-    ]
+    ];
     onMounted(() => {
-      axios.get('https://backend-angelmora-portafolio.herokuapp.com/projects')
+      axios.get("https://backend-angelmora-portafolio.herokuapp.com/projects")
         .then((response) => {
-          response.data.forEach(element => {
+          response.data.forEach((element) => {
             projects.push(element);
           });
         });
-    })
+    });
     return {
       publicPath: process.env.BASE_URL,
       projects,
       skills,
-    }
-  }
+    };
+  },
 };
 </script>
 
@@ -353,11 +361,11 @@ h2 {
   align-items: center;
   overflow-wrap: break-word;
 }
-.card-footer{
+.card-footer {
   width: 100%;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
 }
 .section-sobre__mi h2 {
   opacity: 0.5;
