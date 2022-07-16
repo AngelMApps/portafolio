@@ -231,6 +231,10 @@ export default {
         'name': 'vscode',
         'icon': require('./assets/portfolio/vscode.png'),
       },
+      {
+        'name': 'flask',
+        'icon': require('./assets/portfolio/vscode.png'),
+      },
     ];
     onMounted(() => {
       axios.get("https://backend-angelmora-portafolio.herokuapp.com/projects")
